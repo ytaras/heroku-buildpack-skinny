@@ -14,5 +14,5 @@ addons:
 EOF
 if [ ! -f $BUILD_DIR/Procfile ]; then
   echo "default_process_types:"
-  echo "  web: java \$JAVA_OPTS -Dskinny.port=\$PORT -Dskinny.env=production -Ddb.default.url=\$JDBC_DATABASE_URL -Ddb.default.user=\$JDBC_DATABASE_USER -Ddb.default.password=\$JDBC_DATABASE_PASSWORD -jar standalone-build/target/scala-2.11/*.jar"
+  echo "  web: java \$JAVA_OPTS -Dskinny.port=\$PORT -Dskinny.env=production -Ddb.default.url=\$JDBC_DATABASE_URL -Ddb.default.user=\$JDBC_DATABASE_USER -Ddb.default.password=\$JDBC_DATABASE_PASSWORD -jar standalone-build/target/scala-2.12/*.jar"
 fi

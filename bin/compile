@@ -88,10 +88,11 @@ cd $BUILD_DIR
 echo "-----> Executing: ./skinny package:standalone"
 ./skinny package:standalone < /dev/null
 
-mv $HOME/.ivy2 $CACHE_DIR/.ivy2
-
 # repack cache
 mkdir -p $CACHE_DIR
+
+mv $HOME/.ivy2 $CACHE_DIR/.ivy2
+
 for DIR in $CACHED_DIRS; do
   cache_copy $DIR $BUILD_DIR $CACHE_DIR
 done
